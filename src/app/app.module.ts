@@ -1,3 +1,4 @@
+import { environment } from './../environments/environment';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -10,7 +11,6 @@ import { CallbackthaidComponent } from './callbackthaid/callbackthaid.component'
 import { CallbackmymophComponent } from './callbackmymoph/callbackmymoph.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { environment } from 'src/environments/environment';
 import { AlertService } from './alert.service';
 import { ServiceService } from './service.service';
 
