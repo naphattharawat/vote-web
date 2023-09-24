@@ -14,7 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AlertService } from './alert.service';
 import { ServiceService } from './service.service';
 import { AuthGuardService } from './auth-guard.service';
-
+import { JwtModule } from '@auth0/angular-jwt';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +28,8 @@ import { AuthGuardService } from './auth-guard.service';
     AppRoutingModule,
     NgbModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    JwtModule.forRoot({})
   ],
   providers: [
     AlertService,
