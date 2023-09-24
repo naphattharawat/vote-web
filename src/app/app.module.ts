@@ -15,6 +15,12 @@ import { AlertService } from './alert.service';
 import { ServiceService } from './service.service';
 import { AuthGuardService } from './auth-guard.service';
 import { JwtModule } from '@auth0/angular-jwt';
+
+export function tokenGetter() {
+  return localStorage.getItem("token");
+}
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +35,12 @@ import { JwtModule } from '@auth0/angular-jwt';
     NgbModule,
     FormsModule,
     HttpClientModule,
-    JwtModule.forRoot({})
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: tokenGetter,
+        allowedDomains: ['dev.moph.go.th', 'localhost']
+      },
+    }),
   ],
   providers: [
     AlertService,
