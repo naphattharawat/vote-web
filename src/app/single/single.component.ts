@@ -26,7 +26,7 @@ export class SingleComponent implements OnInit {
     try {
       const rs: any = await this.service.getVote();
       if (rs.ok) {
-        if (rs.rows) {
+        if (rs.rows.length) {
           this.candidateId = rs.rows[0].candidate_id;
         }
       } else {
