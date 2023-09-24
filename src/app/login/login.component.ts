@@ -13,7 +13,7 @@ export class LoginComponent {
     const clientId = 'eUpBa3lHVzBnWVVuU1p0bFE0cElqZmdIYlpteVN3aVo';
     var url = encodeURIComponent('https://dev.moph.go.th/vote/callbackthaid');
     location.href =
-      `https://imauth.bora.dopa.go.th/api/v2/oauth2/auth/?response_type=code&client_id=${clientId}&redirect_uri=${url}&scope=name pid&state=${state}`;
+      `https://imauth.bora.dopa.go.th/api/v2/oauth2/auth/?response_type=code&client_id=${clientId}&redirect_uri=${url}&scope=name%20pid&state=${state}`;
   }
 
   goToMyMOPH() {
