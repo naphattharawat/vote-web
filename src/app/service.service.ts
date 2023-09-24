@@ -19,12 +19,12 @@ export class ServiceService {
 
   async loginThaid(code: any) {
     const url = `${this.apiUrl}/login/thaid`;
-    const rs: any = await this.http.post(url, code, this.options).toPromise();
+    const rs: any = await this.http.post(url, { code: code }, this.options).toPromise();
     return rs;
   }
   async loginMyMoph(code: any) {
     const url = `${this.apiUrl}/login/mymoph`;
-    const rs: any = await this.http.post(url, code, this.options).toPromise();
+    const rs: any = await this.http.post(url, { code: code }, this.options).toPromise();
     return rs;
   }
 
