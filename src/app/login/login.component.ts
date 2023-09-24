@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { nanoid } from 'nanoid'
-
+import { customAlphabet } from 'nanoid'
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -9,7 +8,8 @@ import { nanoid } from 'nanoid'
 export class LoginComponent {
 
   goToThaiD() {
-    const state = nanoid()
+    const nanoid = customAlphabet('1234567890', 18)
+    const state = nanoid();
     const clientId = 'eUpBa3lHVzBnWVVuU1p0bFE0cElqZmdIYlpteVN3aVo';
     var url = encodeURIComponent('https://dev.moph.go.th/vote/callbackthaid');
     location.href =
@@ -17,7 +17,8 @@ export class LoginComponent {
   }
 
   goToMyMOPH() {
-    const state = nanoid()
+    const nanoid = customAlphabet('1234567890', 18)
+    const state = nanoid();
     const clientId = 'LJowyMonNUhrQYREApKD';
     // var url = encodeURIComponent('https://dev.moph.go.th/vote/callbackthaid');
     location.href =
