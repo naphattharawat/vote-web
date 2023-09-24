@@ -8,7 +8,7 @@ export class AuthGuardService {
   constructor(private router: Router, private jwtHelper: JwtHelperService) { }
 
   canActivate() {
-    const token = localStorage.getItem('mnm-token');
+    const token = localStorage.getItem('token');
     // const decodeToken = this.jwtHelper.decodeToken(token);   
     if (token) {
       if (this.jwtHelper.isTokenExpired(token)) {
