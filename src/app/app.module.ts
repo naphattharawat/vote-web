@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AlertService } from './alert.service';
 import { ServiceService } from './service.service';
+import { AuthGuardService } from './auth-guard.service';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { ServiceService } from './service.service';
   providers: [
     AlertService,
     ServiceService,
+    AuthGuardService,
     // { provide: LocationStrategy, useClass: PathLocationStrategy },
     { provide: 'API_URL', useValue: environment.apiUrl },
   ],
