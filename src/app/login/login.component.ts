@@ -18,7 +18,7 @@ export class LoginComponent {
 
   goToMyMOPH() {
     const state = nanoid()
-    const clientId = 'xSbAoJGbYjZSJGZIvdrU';
+    const clientId = 'LJowyMonNUhrQYREApKD';
     // var url = encodeURIComponent('https://dev.moph.go.th/vote/callbackthaid');
     location.href =
       `https://auth.moph.go.th/v1/oauth2/auth?client_id=${clientId}&response_type=code&state=${state}`;
