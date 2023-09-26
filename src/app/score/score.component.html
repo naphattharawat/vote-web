@@ -1,0 +1,39 @@
+<div style="padding:1rem">
+  <table class="table">
+    <thead>
+      <tr>
+        <td>ชื่อ</td>
+        <td>กรรมการ</td>
+        <td>ศทส.</td>
+        <td>รวม</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i of single">
+        <td>{{i.name}}</td>
+        <td>{{i.score}}</td>
+        <td>{{i.count}}</td>
+        <td>{{i.sum_score}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <td>ชื่อ</td>
+        <td>หัวหน้า</td>
+        <td>คนในทีม</td>
+        <td>รวม</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i of team">
+        <td>{{i.name}}</td>
+        <td>{{i.score_head}}</td>
+        <td>{{i.score_team}}</td>
+        <td>{{i.score}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

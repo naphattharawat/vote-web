@@ -29,7 +29,7 @@ export class ServiceService {
   }
 
   async getCandidate() {
-    const url = `${this.apiUrl}/vote/candidate`;
+    const url = `${this.apiUrl}/votec/candidate`;
     const rs: any = await this.http.get(url, this.options).toPromise();
     return rs;
   }
@@ -40,10 +40,43 @@ export class ServiceService {
     return rs;
   }
 
+  async voteCom(id: any, data: any) {
+    const url = `${this.apiUrl}/votec/single-committee`;
+    const rs: any = await this.http.post(url, { sessionId: id, data: data }, this.options).toPromise();
+    return rs;
+  }
+
   async getVote() {
     const url = `${this.apiUrl}/vote/single`;
     const rs: any = await this.http.get(url, this.options).toPromise();
     return rs;
   }
+  async getVoteCom(sid: any) {
+    const url = `${this.apiUrl}/votec/single-committee?sessionId=${sid}`;
+    const rs: any = await this.http.get(url, this.options).toPromise();
+    return rs;
+  }
 
+  async getVoteTeam(sid: any) {
+    const url = `${this.apiUrl}/votec/team?sessionId=${sid}`;
+    const rs: any = await this.http.get(url, this.options).toPromise();
+    return rs;
+  }
+
+  async voteTeam(id: any, data: any) {
+    const url = `${this.apiUrl}/votec/team`;
+    const rs: any = await this.http.post(url, { sessionId: id, data: data }, this.options).toPromise();
+    return rs;
+  }
+
+  async scoreSingle() {
+    const url = `${this.apiUrl}/score/single`;
+    const rs: any = await this.http.get(url, this.options).toPromise();
+    return rs;
+  }
+  async scoreTeam() {
+    const url = `${this.apiUrl}/score/team`;
+    const rs: any = await this.http.get(url, this.options).toPromise();
+    return rs;
+  }
 }

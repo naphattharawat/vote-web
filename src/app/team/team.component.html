@@ -1,0 +1,33 @@
+<div class="row" style="padding-left: 0.5rem;padding-right: 0.5rem;padding-top: 1rem;margin: 0;">
+  <div class="col-12">
+    <h3>
+      ให้คะแนนแต่ละกลุ่ม/ฝ่าย
+    </h3>
+  </div>
+  <div class="col-12">
+    <table class="table">
+      <thead>
+        <tr>
+          <td>กลุ่ม/ฝ่าย</td>
+          <td>คะแนน<br>หัวหน้า</td>
+          <td>คะแนน<br>คนในทีม</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let i of list">
+          <td>{{i.name}} <br>({{i.people}} คน)</td>
+          <td><input style="width:4rem" type="number" class="form-control" max="10" [(ngModel)]="i.score_head"></td>
+          <td><input style="width:4rem" type="number" class="form-control" max="10" [(ngModel)]="i.score_team"></td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      **คะแนนหัวหน้า เต็ม 10 หากหัวหน้าไม่แต่งให้ 0 คะแนน ทันที
+    </p>
+    <p>
+      **คะแนนคนในทีม เต็ม 10 หากมีคนไม่แต่งให้ 0 คะแนน ทันที
+    </p>
+    <button class="btn btn-primary" style="width:100%" (click)="vote()">ส่งผลคะแนน</button>
+
+  </div>
+</div>

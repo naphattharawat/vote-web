@@ -1,0 +1,32 @@
+<div class="row" style="padding-left: 0.5rem;padding-right: 0.5rem;padding-top: 1rem;margin: 0;">
+  <div class="col-12">
+    <h3>
+      กรรมการมีคะแนน คนละ 15 คะแนน
+    </h3>
+    <h4>
+      เหลือ {{score}} คะแนน
+    </h4>
+  </div>
+  <div class="col-6 col-md-2" *ngFor="let i of list">
+    <div class="card" style="width: 100%">
+      <img class="card-img-top" [src]="i.image" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{i.name}}</h5>
+        <p class="card-text" *ngIf="i.desc">{{i.desc}}</p>
+        <!-- <div class="d-grid gap-2"> -->
+        <div class="row">
+          <div class="col-4"> <button class="btn btn-sm btn-danger" (click)="onMinus(i)">ลด</button></div>
+          <div class="col-4" style="text-align: center;"> {{i.score}}</div>
+          <div class="col-4"> <button class="btn btn-sm btn-success" (click)="onPlus(i)">เพิ่ม</button></div>
+        </div>
+
+
+        <!-- </div> -->
+      </div>
+    </div>
+  </div>
+  <div class="col-12">
+    <br>
+    <button [disabled]="isSave" class="btn btn-primary " style="width: 100%;" type="button" (click)="vote()">ส่งผลคะแนน</button>
+  </div>
+</div>

@@ -5,11 +5,17 @@ import { LoginComponent } from './login/login.component';
 import { CallbackthaidComponent } from './callbackthaid/callbackthaid.component';
 import { CallbackmymophComponent } from './callbackmymoph/callbackmymoph.component';
 import { AuthGuardService } from './auth-guard.service';
+import { SingleCommitteeComponent } from './single-committee/single-committee.component';
+import { TeamComponent } from './team/team.component';
+import { ScoreComponent } from './score/score.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'single', canActivate: [AuthGuardService], component: SingleComponent },
+  { path: 'single-committee', component: SingleCommitteeComponent },
+  { path: 'team', component: TeamComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'score', component: ScoreComponent },
   { path: 'callbackthaid', component: CallbackthaidComponent },
   { path: 'callbackmymoph', component: CallbackmymophComponent },
 ];

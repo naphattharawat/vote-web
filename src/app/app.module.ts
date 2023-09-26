@@ -15,6 +15,9 @@ import { AlertService } from './alert.service';
 import { ServiceService } from './service.service';
 import { AuthGuardService } from './auth-guard.service';
 import { JwtModule } from '@auth0/angular-jwt';
+import { SingleCommitteeComponent } from './single-committee/single-committee.component';
+import { TeamComponent } from './team/team.component';
+import { ScoreComponent } from './score/score.component';
 
 export function tokenGetter() {
   return localStorage.getItem("token");
@@ -27,7 +30,10 @@ export function tokenGetter() {
     SingleComponent,
     LoginComponent,
     CallbackthaidComponent,
-    CallbackmymophComponent
+    CallbackmymophComponent,
+    SingleCommitteeComponent,
+    TeamComponent,
+    ScoreComponent
   ],
   imports: [
     BrowserModule,
