@@ -79,4 +79,38 @@ export class ServiceService {
     const rs: any = await this.http.get(url, this.options).toPromise();
     return rs;
   }
+
+  async updateImage(id: any, urlImg: any) {
+    const url = `${this.apiUrl}/img`;
+    const rs: any = await this.http.put(url, { id: id, url: urlImg }, this.options).toPromise();
+    return rs;
+  }
+
+  uploadFile(files: File | null, id: any) {
+    return new Promise((resolve, reject) => {
+      const formData: any = new FormData();
+      const xhr = new XMLHttpRequest();
+
+      if (files) {
+        formData.append('files', files, files.name);
+        formData.append('id', id);
+      }
+
+      xhr.onreadystatechange = () => {
+        if (xhr.readyState === 4) {
+          if (xhr.status === 200) {
+            resolve(JSON.parse(xhr.response));
+          } else {
+            reject(xhr.response);
+          }
+        }
+      };
+
+      // const token: any = sessionStorage.getItem('token');
+      const url = `https://dev.trantech.co.th/api/document/uploads?&documentCode=${id}`;
+      // i.image_url = `${this.docUrl}/uploads/files/${i.image_url}`;
+      xhr.open('POST', url, true);
+      xhr.send(formData);
+    });
+  }
 }

@@ -18,6 +18,7 @@ import { JwtModule } from '@auth0/angular-jwt';
 import { SingleCommitteeComponent } from './single-committee/single-committee.component';
 import { TeamComponent } from './team/team.component';
 import { ScoreComponent } from './score/score.component';
+import { UploadComponent } from './upload/upload.component';
 
 export function tokenGetter() {
   return localStorage.getItem("token");
@@ -33,7 +34,8 @@ export function tokenGetter() {
     CallbackmymophComponent,
     SingleCommitteeComponent,
     TeamComponent,
-    ScoreComponent
+    ScoreComponent,
+    UploadComponent
   ],
   imports: [
     BrowserModule,

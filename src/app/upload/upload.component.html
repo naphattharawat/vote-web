@@ -1,0 +1,18 @@
+<div style="padding:1rem">
+  <table class="table">
+    <thead>
+      <tr>
+        <td>ชื่อ</td>
+        <td>รูป</td>
+        <td>อัพโหลด</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i of list">
+        <td>{{i.name}}</td>
+        <td><img [src]="i.image" alt="" style="width:30%"></td>
+        <td><input type="file" (change)="uploadImg($event,i)"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

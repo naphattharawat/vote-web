@@ -8,6 +8,7 @@ import { AuthGuardService } from './auth-guard.service';
 import { SingleCommitteeComponent } from './single-committee/single-committee.component';
 import { TeamComponent } from './team/team.component';
 import { ScoreComponent } from './score/score.component';
+import { UploadComponent } from './upload/upload.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'single-committee', component: SingleCommitteeComponent },
   { path: 'team', component: TeamComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'upload', component: UploadComponent },
   { path: 'score', component: ScoreComponent },
   { path: 'callbackthaid', component: CallbackthaidComponent },
   { path: 'callbackmymoph', component: CallbackmymophComponent },
