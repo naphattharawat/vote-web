@@ -18,7 +18,7 @@ export class SingleComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.getVote();
+    // this.getVote();
     this.getCandidate();
   }
 
