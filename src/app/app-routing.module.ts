@@ -12,7 +12,7 @@ import { UploadComponent } from './upload/upload.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'single', pathMatch: 'full' },
-  { path: 'single', canActivate: [AuthGuardService], component: SingleComponent },
+  { path: 'single', component: SingleComponent },
   { path: 'single-committee', component: SingleCommitteeComponent },
   { path: 'team', component: TeamComponent },
   { path: 'login', component: LoginComponent },
