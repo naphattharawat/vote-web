@@ -11,7 +11,7 @@ import { ScoreComponent } from './score/score.component';
 import { UploadComponent } from './upload/upload.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: '', redirectTo: 'single', pathMatch: 'full' },
   { path: 'single', canActivate: [AuthGuardService], component: SingleComponent },
   { path: 'single-committee', component: SingleCommitteeComponent },
   { path: 'team', component: TeamComponent },
