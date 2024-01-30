@@ -26,7 +26,7 @@ export class CallbackthaidComponent implements OnInit {
       const rs: any = await this.service.loginThaid(this.code);
       if (rs.ok) {
         localStorage.setItem('token', rs.token);
-        this.router.navigate(['/logo']);
+        this.router.navigateByUrl('/logo');
       } else {
         this.alertService.error(rs.error);
         this.router.navigate(['/login']);
