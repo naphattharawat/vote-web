@@ -19,6 +19,7 @@ import { SingleCommitteeComponent } from './single-committee/single-committee.co
 import { TeamComponent } from './team/team.component';
 import { ScoreComponent } from './score/score.component';
 import { UploadComponent } from './upload/upload.component';
+import { LogoComponent } from './logo/logo.component';
 
 export function tokenGetter() {
   return localStorage.getItem("token");
@@ -30,6 +31,7 @@ export function tokenGetter() {
     AppComponent,
     SingleComponent,
     LoginComponent,
+    LogoComponent,
     CallbackthaidComponent,
     CallbackmymophComponent,
     SingleCommitteeComponent,
