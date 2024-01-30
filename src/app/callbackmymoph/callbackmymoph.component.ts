@@ -26,7 +26,7 @@ export class CallbackmymophComponent implements OnInit {
       const rs: any = await this.service.loginMyMoph(this.code);
       if (rs.ok) {
         localStorage.setItem('token', rs.token);
-        this.router.navigate(['/single']);
+        this.router.navigate(['/logo']);
       } else {
         this.alertService.error(rs.error);
         this.router.navigate(['/login']);
