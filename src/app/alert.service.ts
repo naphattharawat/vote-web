@@ -56,7 +56,7 @@ export class AlertService {
 
   }
 
-  confirm(text = 'คุณต้องการดำเนินการนี้ ใช่หรือไม่?') {
+  async confirm(text = 'คุณต้องการดำเนินการนี้ ใช่หรือไม่?') {
     const option: SweetAlertOptions = {
       title: '',
       text: text,
@@ -67,7 +67,7 @@ export class AlertService {
       confirmButtonText: 'ใช่, ดำเนินการ!',
       cancelButtonText: 'ยกเลิก'
     };
-    return Swal.fire(option);
+    return (await Swal.fire(option)).isConfirmed;
   }
 
   popup(title = '', text = '') {

@@ -54,6 +54,8 @@ export class LogoComponent implements OnInit {
     try {
       this.isSave = true;
       const confirm = await this.alertService.confirm(`คุณต้องการโหวตให้ ${data.name} ใช่หรือไม่?`);
+      console.log(confirm);
+      
       if (confirm) {
         const rs: any = await this.service.vote(data.id);
         if (rs.ok) {
